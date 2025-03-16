@@ -40,6 +40,11 @@ app.use("/api/v1/playlist", userJwtMiddleware, playlistRoutes);
 app.get("/api/v1/stream/:filename", streamSong);
 app.get('/api/v1/songs', getSongs);
 
+
+app.get("/", (req, res) => {
+  res.send("api working")
+})
+
 // Fallback to index.html for SPA
 app.get("*", (req, res) => {
   res.sendFile(path.resolve('public/index.html'));
