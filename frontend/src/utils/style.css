@@ -1,0 +1,71 @@
+.slide-enter-active{
+    animation: slide-in 0.5s ease-in-out;
+}
+.slide-out-active{
+    animation: slide-out 0.5s ease-in-out;
+    
+}
+.hero-enter-active{
+    animation: hero 1s ease-in-out;
+}
+.hero-out-active{
+    animation: hero2 0.5s ease-out;
+}
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        opacity: 1;
+        right: 0;
+    }
+    to {
+        opacity: 0;
+        right: -256px;
+    }
+}
+
+@keyframes hero {
+    0% {
+        width: 100%;
+        height: 100%;
+        
+    }
+    /* 20% {
+        width: 80%;
+        height: 80%;
+    }
+
+    50% {
+        width: 50%;
+        height: 50%;
+    }
+    80% {
+        width: 30%;
+        height: 30%;
+    } */
+    100% {
+        width: 20%;
+        height: 20%;
+    }
+}
+
+@keyframes hero2 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
